@@ -1,5 +1,6 @@
 <h1 align="center"> MSI-Bravo-15 Hackintosh EFI </h1>
-/image
+<img src=EFI/screenshot.png></img>
+
 <h3 align="center"> MSI Bravo 15 B5DD Ryzen 5 5600H + Rx5500M 15.6inch EFI </h3>
 
 ## Intro
