@@ -125,3 +125,5 @@ Use SSDT-Nvme-DISABLE.aml to disable the Nvme drives that are problematic, else 
 *   [Smokeless UMAF](https://github.com/DavidS95/Smokeless_UMAF) for vram.
 *   [ExtremeXT](https://github.com/extremext/) for help, corrections, my first EFI and git README info/references.
 *   Anyone else that helped to develop and improve hackintoshing.
+
+* Late night coffee mate, [Kush](https://github.com/kushchoudhary98)
