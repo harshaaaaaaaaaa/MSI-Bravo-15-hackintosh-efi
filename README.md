@@ -1,4 +1,4 @@
-<h1 align="center"> # MSI-Bravo-15 Hackintosh EFI </h1>
+<h1 align="center"> MSI-Bravo-15 Hackintosh EFI </h1>
 
 <h3> MSI Bravo 15 B5DD Ryzen 5 5600H + Rx5500M 15.6inch EFI </h3>
 
@@ -12,12 +12,12 @@
 
  <h2> OpenCore EFI For MSI Bravo 15 Ryzen 5 5600H & Radeon RX 5500M</h2>
  OpenCore Ver: 1.0.2</br>
- MacOS Supported Ver: 
- *   BigSur
-*   Monterey
-*   Ventura 
-*   Sonomo ( Disable NootedRed.kext and set **SecureBootModel** to **Disabled** until installation complete.)
-*   Sequoia ( Disable NootedRed.kext, & set **SecureBootModel** to **Disabled** until installation complete.)
+MacOS Supported Ver:</br>
+ -   BigSur</br>
+-   Monterey<br/>
+-   Ventura<br/>
+-   Sonomo ( Disable NootedRed.kext and set SecureBootModel to Disabled until installation complete.)<br/>
+-   Sequoia ( Disable NootedRed.kext, & set SecureBootModel to Disabled until installation complete.)<br/>
 
 
 
@@ -25,11 +25,11 @@
 |                 | ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ Laptop specifications‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎ ‎              |
 | ----------------------- | :------------------------------------------------------------------------- |   
 | CPU                     | AMD Ryzen™ 5 5600H with Radeon Graphics                                    |
-| iGPU                    | Radeon Graphics (Vega 8)                                                   |
-| dGPU                    | Radeon RX 5500M (Navi 14) [DISABLED]                                     |
+| iGPU                    | Radeon Graphics Cezanne (Vega)                                                   |
+| dGPU                    | Radeon RX 5500M [DISABLED]                                     |
 | Memory                  | 8GB DDR4 3200MHz                                                          |
-| Storage                 |512GB NVMe WD SN580 PCIe Gen4                                                          |
-| Network                 | RTL______ 802.11ax PCIe Wireless Network Adapter [UNSUPPORTED]                         | 
+| Storage                 |512GB NVMe WD SN350 PCIe Gen4                                                          |
+| Network                 | RZ608 802.11ax PCIe Wireless Network Adapter [UNSUPPORTED]                         | 
 || RTL8111 PCI Express Gigabit Ethernet Controller|
 | Audio|Realtek ALC256|
 |LCD Panel| 15.6" FHD IPS 144Hz|
@@ -61,7 +61,7 @@
 | [AMDRyzenCPUPowerManagement.kext](https://github.com/trulyspinach/SMCAMDProcessor) | Power management and monitoring of AMD processors |
 | [AppleALC.kext](https://github.com/acidanthera/AppleALC) | Native macOS HD audio for not officially supported codecs |
 | [AppleMCEReporterDisabler.kext](https://files.amd-osx.com/AppleMCEReporterDisabler.kext.zip) | Disables AppleIntelMCEReporter which causes panics on AMD CPUs |
-| [AmdTscSync](https://github.com/naveenkrdy/AmdTscSync"AmdTscSync") | Synchronises the TimeStamp Counter (TSC). Generally only useful for AMD APUs (usually laptops) |
+| [AmdTscSync](https://github.com/naveenkrdy/AmdTscSync) | Synchronises the TimeStamp Counter (TSC). Generally only useful for AMD APUs (usually laptops) |
 | [Lilu.kext](https://github.com/acidanthera/Lilu) | Platform for arbitrary kext, library, and program patching throughout the system |
 | [NVMeFix.kext](https://github.com/acidanthera/NVMeFix) | Improve compatibility with non-Apple SSDs |
 | [RealtekRTL8111.kext](https://github.com/Mieze/RTL8111_driver_for_OS_X) | Open source driver for the Realtek RTL8111/8168 family |
@@ -85,12 +85,16 @@
 
 Done with [SSDTTime](https://github.com/corpnewt/SSDTTime) in EndeavourOS
 
-| Table | Description |
-| --- | --- |
-| [SSDT-EC](https://github.com/corpnewt/SSDTTime) | Adds a fake Embedded Controller device |
-| [SSDT-PLUG-ALT](https://github.com/corpnewt/SSDTTime) | Fixes CPU definitions |
-| [SSDT-USBX](https://github.com/corpnewt/SSDTTime) | Enables USB Power Management |
-| [SSDT-XOSI](https://github.com/corpnewt/SSDTTime) | Spoof macOS to Windows for some ACPI features |
+| Table |
+| --- |
+| [SSDT-EC](https://github.com/corpnewt/SSDTTime) |
+| [SSDT-PLUG-ALT](https://github.com/corpnewt/SSDTTime) |
+| [SSDT-USBX](https://github.com/corpnewt/SSDTTime) |
+| [SSDT-XOSI](https://github.com/corpnewt/SSDTTime) |
+| [SSDT-ALSO](https://github.com/corpnewt/SSDTTime) |
+| [SSDT-HPET](https://github.com/corpnewt/SSDTTime) |
+| [SSDT-PMC](https://github.com/corpnewt/SSDTTime) |
+| [SSDT-PNLF](https://github.com/corpnewt/SSDTTime) |
 
 Check Dortania's Guide for unsupported hardware like SSD and WLAN cards and replace them with supported ones
 Use SSDT-Nvme-DISABLE.aml to disable the Nvme drives that are problematic, else disable it in config.plist
@@ -107,7 +111,7 @@ Use SSDT-Nvme-DISABLE.aml to disable the Nvme drives that are problematic, else 
 
 
 ## Notice
-- Sometimes settings stops working or shows an error. Open terminal & run
+- Sometimes apps stops working or shows an error. Open terminal & run
   `` sudo purge`` it will start working
 - When there's a **System update**, disable NootedRed while restarting for update.
 
