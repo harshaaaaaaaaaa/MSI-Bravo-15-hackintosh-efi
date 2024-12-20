@@ -16,7 +16,7 @@ MacOS Supported Ver:</br>
  -   BigSur</br>
 -   Monterey<br/>
 -   Ventura<br/>
--   Sonomo ( Disable NootedRed.kext and set SecureBootModel to Disabled until installation complete.)<br/>
+-   Sonomo ( Disable NootedRed.kext, & set SecureBootModel to Disabled until installation complete.)<br/>
 -   Sequoia ( Disable NootedRed.kext, & set SecureBootModel to Disabled until installation complete.)<br/>
 
 
@@ -48,8 +48,8 @@ MacOS Supported Ver:</br>
 | Trackpad | ✅ | Synaptics Touchpad with AMD I2C Controller |
 | Ethernet | ✅ | RealtekRTL8111.kext |
 | Battery | ✅ | SMCBatteryManager.kext |
-| iServices | ✅ | Message/Facetime tested and working |
-| Shutdown/Reboot | ✅ | |
+| iServices | ✅ | iMessage/Facetime tested and working |
+| Camera | ✅ | |
 | WIFI  & Bluetooth| ❌ | Unsupported Chipset |
 | HDMI A/V out | ❌ | Connected to dGPU  |
 
