@@ -115,6 +115,7 @@ Use SSDT-Nvme-DISABLE.aml to disable the Nvme drives that are problematic, else 
 - Sometimes apps stops working or shows an error. Open terminal & run
   `` sudo purge`` it will start working
 - When there's a **System update**, disable NootedRed while restarting for update.
+- Update SMBIOS before using this. {Serial Number is erased here.}
 
 
 ## Credits
